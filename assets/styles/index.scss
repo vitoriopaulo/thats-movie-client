@@ -1,2 +1,45 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Poiret+One|Raleway');
+
+
+header {
+  background-color: rgb(0, 0, 0);
+  height: 150px;
+  margin: 0px;
+}
+
+.title {
+  font-family: 'Poiret One', sans-serif;
+  font-size: 64px;
+  text-align: center;
+  color: white;
+  padding-top: 50px;
+}
+
+body {
+font-family: 'Raleway', sans-serif;
+}
+
+.back-ground-hp {
+  // background: url('https://cdn.pixabay.com/photo/2017/09/30/10/11/camera-2801675_960_720.jpg');
+  // background-size: cover;
+  width: 1235px;
+  // height: 538px;
+}
+
+footer {
+  max-height: 300px;
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+  // margin: 0;
+  background-color: black;
+  color: white;
+  padding: 12px;
+}
+
+.copyright {
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-size: 36px;
+}
