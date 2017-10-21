@@ -5,17 +5,23 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 
 header {
   background-color: rgb(0, 0, 0);
-  height: 150px;
+  height: 175px;
   margin: 0px;
 }
 
 .title {
   font-family: 'Poiret One', sans-serif;
   font-size: 64px;
-  text-align: center;
+  text-align: right;
   color: white;
-  padding-top: 50px;
+  padding-top: 25px;
+  padding-right: 75px;
 }
+
+// ul {
+//   list-style-type: none;
+//   display: inline;
+// }
 
 body {
 font-family: 'Raleway', sans-serif;
@@ -24,8 +30,8 @@ font-family: 'Raleway', sans-serif;
 .back-ground-hp {
   // background: url('https://cdn.pixabay.com/photo/2017/09/30/10/11/camera-2801675_960_720.jpg');
   // background-size: cover;
-  width: 1235px;
-  // height: 538px;
+  max-width: 1235px;
+  max-height: 692px;
 }
 
 footer {
@@ -35,11 +41,121 @@ footer {
   // margin: 0;
   background-color: black;
   color: white;
-  padding: 12px;
 }
 
 .copyright {
   color: white;
   font-family: 'Raleway', sans-serif;
   font-size: 36px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  padding-left: 50px;
+}
+
+ //* Auth Modal Styling *//
+
+.main-title {
+  display: inline;
+  float: left;
+}
+
+.modal-button {
+  float: right;
+  margin-top: 2em;
+  margin-right: 2em;
+  color: black;
+  background-color: rgb(199, 255, 13);
+  margin-right: 50px;
+}
+
+.text-green {
+  color: #67ab58;
+  font-weight: bold;
+}
+
+.underline {
+  border-style: none;
+  border-bottom: solid #5e4245 2px;
+  margin: 2em;
+  width: 18em;
+  background-color: #fefefe;
+}
+
+.btn-file {
+  margin-right: 2em;
+}
+
+form {
+  padding-bottom: 2em;
+}
+
+.input-title {
+  background-color: #fafafa;
+}
+
+#navbar-toggle-cbox {
+  display: none;
+}
+
+#navbar-toggle-cbox:checked ~ .collapse {
+    display: block;
+}
+/* The Modal (background) */
+.modal {
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.required {
+  color: #ff0000;
+}
+
+.center {
+  text-align: center;
+}
+// .file-upload-container {
+//   padding-left: 35%;
+//
+// }
+.align-right {
+  float: right;
+  margin-right: 2em;
+}
+
+.input-group .form-control {
+  width: 20em !important;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #444;
+    width: 45%; /* Could be more or less, depending on screen size */
+    overflow: auto;
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+#sign-out {
+  float: right;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    font-size: 48px;
+    text-decoration: none;
+    cursor: pointer;
 }

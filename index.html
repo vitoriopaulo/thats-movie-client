@@ -11,24 +11,69 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
+
     <body class="container-fluid">
+
   <header>
-
-<ul>
-
-  <li>
-    <h1 class="title">That's Movie!</h1>
-  </li>
-
-  <li>
-
-  </li>
-
+    <!-- <nav class="nav navbar" id="topnav"> -->
+          <div class="row">
+            <div class="col-md-9">
+              <h1 class="title">That's Movie!</h1>
+            </div>
+              <!-- User auth forms modal -->
+            <div class="col-md-3">
+            <!-- Trigger/Open The Modal -->
+              <button type="button" data-toggle="modal" data-target="#auth-modal" class='modal-button btn btn-success'>Account</button>
+            </div>
+          </div>
+        <!-- </nav> -->
 </header>
 
   <div class="back-ground-hp signed-out"> <img src="assets/images/hp-color.jpg">
-
   </div>
+
+  <!-- Auth Modal -->
+          <div class="modal fade" id="auth-modal" tabindex="-1" aria-hidden="true">
+          <!-- auth content -->
+            <div class="modal-content">
+              <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+              <p id='message'></p>
+              <section id='auth'>
+
+                <form id="sign-up" class='secondary-hide'>
+                  <fieldset>
+                    <h4 class="text-green">Sign up</h4>
+                    <input class="underline" type="email" name="credentials[email]" placeholder="Input email">
+                    <input class="underline" type="password" name="credentials[password]" placeholder="Input password">
+                    <input class="underline" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+                   <button class="btn btn-success" type="submit" name="submit" >Sign up! </button>
+                  </fieldset>
+                </form>
+
+
+                <form id="sign-in" class='secondary-hide'>
+                  <h4 class='secondary-hide text-green'>Sign In</h4>
+                  <input class="underline" type="email" name="credentials[email]" placeholder="Input email">
+                  <input class="underline" type="password" name="credentials[password]" placeholder="Input password">
+                  <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+
+
+                <form id="change-password" class='initial-hide'>
+                  <h4 class='initial-hide text-green'>Change Password</h4>
+                  <input class="underline" type="password" name="passwords[old]" placeholder="Input old password">
+                  <input class="underline" type="password" name="passwords[new]" placeholder="Input new password">
+                  <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+
+                <form id="sign-out" class='initial-hide'>
+                  <button type="submit" class="btn btn-danger">
+                    Sign out
+                  </button>
+                </form>
+              </section>
+            </div>
+          </div>
 
 
   <footer class="footer"> <p class="copyright"> Copyright 2017 :: Created with much &hearts;
