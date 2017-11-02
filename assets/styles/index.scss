@@ -3,9 +3,10 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import url('https://fonts.googleapis.com/css?family=Poiret+One|Raleway');
 
 
-header {
+.header {
   background-color: rgb(0, 0, 0);
   height: 175px;
+  width: 1235px;
   margin: 0px;
 }
 
@@ -36,21 +37,32 @@ font-family: 'Raleway', sans-serif;
   // background: url('https://cdn.pixabay.com/photo/2017/09/30/10/11/camera-2801675_960_720.jpg');
   // background-size: cover;
   max-width: 1235px;
-  max-height: 692px;
+  height: 100%;
+  margin: 0 auto;
+  position: absolute;
 }
 
-footer {
-  max-height: 300px;
-  font-size: 18px;
-  font-family: 'Raleway', sans-serif;
-  // margin: 0;
+.container {
+  height: 1025px;
+  width: 100%;
+  position: absolute;
+}
+
+.footer {
+  max-height: 175px;
+  width: 1235px;
+  font-size: 24px;
+  font-family: 'Poiret One', sans-serif;
+  margin: 0;
   background-color: black;
   color: white;
+  position: relative;
+  bottom: 0;
 }
 
 .copyright {
   color: white;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Poiret One', sans-serif;
   font-size: 36px;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -196,9 +208,10 @@ form {
   width: 440px;
   height: 45px;
   font-family: 'Raleway', sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   border: none;
   text-align: center;
+  color: rgb(199, 255, 13);
 }
 
 input {
@@ -239,10 +252,12 @@ legend {
 }
 
 html, body {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   text-align: center;
   background-color: rgb(75, 75, 75);
+  height: 100%;
+  width: 100%;
 }
 
 #getallmovies {
@@ -274,10 +289,10 @@ width: 440px;
 height: 145px;
 background-color: black;
 font-family: 'Raleway', sans-serif;
-font-size: 18px;
+font-size: 16px;
 border: none;
 text-align: center;
 line-height: 1.5;
 resize: vertical;
-color: rgb(199, 255, 13)
+color: rgb(199, 255, 13);
 }

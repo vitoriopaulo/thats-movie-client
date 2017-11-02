@@ -13,7 +13,7 @@ const getAllMoviesSuccess = function (data) {
     movie.year + ' .' + '</p>' + '<br>' + '<p>' + 'Directed by: ' + movie.director + ' .' + '</p>' +
     '<br>' + '<p>' + 'Main Actors: ' + movie.actors + ' .' + '</p>' + '<br>' + '<p>' + 'Category: ' +
     movie.category + '</p>' + '<br>' + '<p>' + 'Status: ' + movie.status + ' .' + '<br>' + '<p>' +
-    'Comments: ' + movie.comment + '</p>' + '<br>' + '<p>' + 'Trailer url: ' + movie.trailer + '</a>'
+    'Comments: ' + movie.comment + '</p>' + '<br>' + '<p>' + 'Trailer url: ' + movie.trailer +
     '</p>' + '</li>'
   })
   $('#movies').html(newHTML)
