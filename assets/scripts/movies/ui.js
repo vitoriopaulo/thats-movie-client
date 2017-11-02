@@ -1,22 +1,16 @@
 'use strict'
 const store = require('../store')
 
+const showMoviesTemplate = require('../templates/movies.handlebars')
+
 const getAllMoviesSuccess = function (data) {
   store.movies = data.movies
 
+  const showMoviesHtml = showMoviesTemplate({ movies: data.movies })
+
   $('#movies').show()
 
-  let newHTML = ' '
-  store.movies.forEach(function (movie) {
-    newHTML += '<li><h4>' + '<br>' + movie.id + '. ' + movie.title + '</h4>' + '<br>' + '<p>' + movie.poster +
-    '</p>' + '<br>' + '<p>' + 'Sinopse: ' + movie.sinopse + ' .' + '</p>' + '<br>' + '<p>' + 'Released in: ' +
-    movie.year + ' .' + '</p>' + '<br>' + '<p>' + 'Directed by: ' + movie.director + ' .' + '</p>' +
-    '<br>' + '<p>' + 'Main Actors: ' + movie.actors + ' .' + '</p>' + '<br>' + '<p>' + 'Category: ' +
-    movie.category + '</p>' + '<br>' + '<p>' + 'Status: ' + movie.status + ' .' + '<br>' + '<p>' +
-    'Comments: ' + movie.comment + '</p>' + '<br>' + '<p>' + 'Trailer url: ' + movie.trailer +
-    '</p>' + '</li>'
-  })
-  $('#movies').html(newHTML)
+  $('#movies').html(showMoviesHtml)
 
   console.log(data)
   // console.log('Sucessfully get all songs.')

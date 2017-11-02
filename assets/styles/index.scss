@@ -242,7 +242,7 @@ p {
   color: rgb(185, 185, 185);
   font-family: 'Raleway', sans-serif;
   font-size: 14px;
-  text-align: center;
+  text-align: justify;
 }
 
 
@@ -295,4 +295,10 @@ text-align: center;
 line-height: 1.5;
 resize: vertical;
 color: rgb(199, 255, 13);
+}
+
+#movies-list {
+  text-align: center;
+  margin-left: 20px;
+  margin-right: 40px;
 }

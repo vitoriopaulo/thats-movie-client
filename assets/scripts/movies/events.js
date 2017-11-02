@@ -42,7 +42,7 @@ const onDeleteMovie = function (event) {
   event.preventDefault()
   api.deleteMovie(data)
     .then(ui.deleteMovieSuccess)
-    .catch(ui.deleteMusicFailure)
+    .catch(ui.deleteMovieFailure)
 }
 
 const addHandlers2 = function () {
