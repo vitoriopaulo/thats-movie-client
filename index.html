@@ -10,6 +10,10 @@
       <!-- Do not add `script` tags-->
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+      <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="linkify.min.js"></script>
+      <script src="linkify-jquery.min.js"></script> -->
     </head>
 
     <body class="container-fluid">
@@ -113,8 +117,10 @@
       <br>
       <br>
 
-        <ul class="initial-hide" id="movie">
-        </ul>
+      <div id="getonemovie" class="initial-hide">
+            <ul class="initial-hide" id="movie">
+            </ul>
+      </div>
 
       <br>
       <br>
@@ -128,7 +134,7 @@
                 <input type="text" name="movie[title]" placeholder="Type movie title here." class="my-input" autocomplete="off" required>
                 <br>
                 <br>
-                <input type="text" name="movie[sinopse]" placeholder="Type movie sinopse here." class="my-input" autocomplete="off" required>
+                <textarea type="text" name="movie[sinopse]" placeholder="Type movie sinopse here." class="my-txtarea" autocomplete="off" required></textarea>
                 <br>
                 <br>
                 <input type="number" name="movie[year]" placeholder="Type movie year here." class="my-input" autocomplete="off" required>
@@ -137,7 +143,7 @@
                 <input type="text" name="movie[director]" placeholder="Type movie director here." class="my-input" autocomplete="off" required>
                 <br>
                 <br>
-                <input type="text" name="movie[actors]" placeholder="Type movie actors here." class="my-input" autocomplete="off" required>
+                <textarea type="text" name="movie[actors]" placeholder="Type movie actors here." class="my-txtarea" autocomplete="off" required></textarea>
                 <br>
                 <br>
                 <input type="text" name="movie[poster]" placeholder="Type movie poster url here." class="my-input" autocomplete="off" required>
@@ -149,7 +155,7 @@
                 <input type="text" name="movie[category]" placeholder="Type movie category here." class="my-input" autocomplete="off" required>
                 <br>
                 <br>
-                <input type="text" name="movie[comment]" placeholder="Type movie comment here." class="my-input" autocomplete="off" required>
+                <textarea type="text" name="movie[comment]" placeholder="Type movie comment here." class="my-txtarea" autocomplete="off" required></textarea>
                 <br>
                 <br>
                 <input type="text" name="movie[status]" placeholder="Type movie status here." class="my-input" autocomplete="off" required>
@@ -175,7 +181,7 @@
                 <input type="text" name="movie[title]" placeholder="Type movie title here." class="my-input" autocomplete="off" required>
                 <br>
                 <br>
-                <input type="text" name="movie[sinopse]" placeholder="Type movie sinopse here." class="my-input" autocomplete="off" required>
+                <textarea type="text" name="movie[sinopse]" placeholder="Type movie sinopse here." class="my-txtarea" autocomplete="off" required></textarea>
                 <br>
                 <br>
                 <input type="number" name="movie[year]" placeholder="Type movie year here." class="my-input" autocomplete="off" required>
@@ -184,7 +190,7 @@
                 <input type="text" name="movie[director]" placeholder="Type movie director here." class="my-input" autocomplete="off" required>
                 <br>
                 <br>
-                <input type="text" name="movie[actors]" placeholder="Type movie actors here." class="my-input" autocomplete="off" required>
+                <textarea type="text" name="movie[actors]" placeholder="Type movie actors here." class="my-txtarea" autocomplete="off" required></textarea>
                 <br>
                 <br>
                 <input type="text" name="movie[poster]" placeholder="Type movie poster url here." class="my-input" autocomplete="off" required>
@@ -196,7 +202,7 @@
                 <input type="text" name="movie[category]" placeholder="Type movie category here." class="my-input" autocomplete="off" required>
                 <br>
                 <br>
-                <input type="text" name="movie[comment]" placeholder="Type movie comment here." class="my-input" autocomplete="off" required>
+                <textarea type="text" name="movie[comment]" placeholder="Type movie comment here." class="my-txtarea" autocomplete="off" required></textarea>
                 <br>
                 <br>
                 <input type="text" name="movie[status]" placeholder="Type movie status here." class="my-input" autocomplete="off" required>
