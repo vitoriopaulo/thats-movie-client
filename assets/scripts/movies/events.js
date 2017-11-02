@@ -14,7 +14,7 @@ const onGetAllMovies = function (event) {
 
 const onGetOneMovie = function (event) {
   const data = getFormFields(this)
-  console.log(data.movie)
+  // console.log(data.movie)
   event.preventDefault()
   api.getOneMovie(data)
     .then(ui.getOneMovieSuccess)

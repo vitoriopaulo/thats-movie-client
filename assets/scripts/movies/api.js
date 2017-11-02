@@ -13,7 +13,7 @@ const getAllMovies = function (data) {
 }
 
 const getOneMovie = function (data) {
-  console.log('This is the id of this movie: ' + data.movie)
+  // console.log('This is the id of this movie: ' + data.movie)
   return $.ajax({
     url: config.apiOrigin + '/movies/' + data.movie,
     method: 'GET',

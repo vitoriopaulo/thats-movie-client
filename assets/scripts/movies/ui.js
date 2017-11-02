@@ -14,7 +14,7 @@ const getAllMoviesSuccess = function (data) {
   $('#movies').html(showMoviesHtml)
 
   console.log(data)
-  // console.log('Sucessfully get all songs.')
+  // console.log('Sucessfully get all movies.')
   // $('.my-input').val("")
   $('#message_0').show().text('Have movies? Movies will be rendered. No movies? Please add movies.').delay(5000).fadeOut(7000)
 }
@@ -25,7 +25,7 @@ const getAllMoviesFailure = function (error) {
 }
 
 const getOneMovieSuccess = function (data) {
-  console.log('Discovering what is it called data: ' + data)
+  // console.log('Discovering what is it called data: ' + data)
   store.movie = data.movie
 
   const showMovieHtml = showMovieTemplate({ movie: data.movie })
@@ -35,31 +35,9 @@ const getOneMovieSuccess = function (data) {
   $('#movie').html(showMovieHtml)
 
   $('.my-input').val('')
-  // console.log(data)
-  // store.movie = data.movie
-  // console.log(store)
+
   $('#message_1').show().text('Sucessfully get movie.').fadeOut(5000)
 }
-
-// const getOneMovieSuccess = function (data) {
-// console.log('Discovering what is it called data: ' + data)
-//   store.movie = data.movie
-//   $('#movie').show()
-//
-//   $('#movie').html('<li><h4>' + movie.title + '</h4>' + '<br>' + '<p>' + movie.poster +
-//   '</p>' + '<br>' + '<p>' + 'Sinopse: ' + movie.sinopse + ' .' + '</p>' + '<br>' + '<p>' + 'Released in: ' +
-//   movie.year + ' .' + '</p>' + '<br>' + '<p>' + 'Directed by: ' + movie.director + ' .' + '</p>' +
-//   '<br>' + '<p>' + 'Main Actors: ' + movie.actors + ' .' + '</p>' + '<br>' + '<p>' + 'Category: ' +
-//   movie.category + '</p>' + '<br>' + '<p>' + 'Status: ' + movie.status + ' .' + '<br>' + '<p>' +
-//   'Comments: ' + movie.comment + '</p>' + '<br>' + '<p>' + 'Trailer url: ' + movie.trailer +
-//   '</p>' + '</li>')
-//
-//   $('.my-input').val('')
-//   // console.log(data)
-//   // store.movie = data.movie
-//   // console.log(store)
-//   $('#message_1').show().text('Sucessfully get movie.').fadeOut(5000)
-// }
 
 const getOneMovieFailure = function (error) {
   console.error(error)
@@ -98,7 +76,7 @@ const updateMovieFailure = function (data) {
 }
 
 const deleteMovieSuccess = function (data) {
-  // console.log(data.song)
+  // console.log(data.movie)
   $('.my-input').val('')
   // console.log('Signed out succesfully!')
   $('#message_4').show().text('Movie successfully deleted.').fadeOut(5000)

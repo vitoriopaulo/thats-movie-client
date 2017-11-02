@@ -19,23 +19,11 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
   padding-right: 135px;
 }
 
-// ul {
-//   list-style-type: none;
-//   display: inline;
-// }
-
 body {
 font-family: 'Raleway', sans-serif;
 }
 
-// .container-fluid {
-//   max-width: 1235px;
-//   max-height: 692px;
-// }
-
 .back-ground-hp {
-  // background: url('https://cdn.pixabay.com/photo/2017/09/30/10/11/camera-2801675_960_720.jpg');
-  // background-size: cover;
   max-width: 1235px;
   height: 100%;
   margin: 0 auto;
@@ -118,6 +106,7 @@ form {
 #navbar-toggle-cbox:checked ~ .collapse {
     display: block;
 }
+
 /* The Modal (background) */
 .modal {
     left: 0;
