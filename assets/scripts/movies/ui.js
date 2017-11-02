@@ -2,6 +2,7 @@
 const store = require('../store')
 
 const showMoviesTemplate = require('../templates/movies.handlebars')
+const showMovieTemplate = require('../templates/movie.handlebars')
 
 const getAllMoviesSuccess = function (data) {
   store.movies = data.movies
@@ -24,17 +25,14 @@ const getAllMoviesFailure = function (error) {
 }
 
 const getOneMovieSuccess = function (data) {
-console.log('Discovering what is it called data: ' + data)
+  console.log('Discovering what is it called data: ' + data)
   store.movie = data.movie
+
+  const showMovieHtml = showMovieTemplate({ movie: data.movie })
+
   $('#movie').show()
 
-  $('#movie').html('<li><h4>' + movie.title + '</h4>' + '<br>' + '<p>' + movie.poster +
-  '</p>' + '<br>' + '<p>' + 'Sinopse: ' + movie.sinopse + ' .' + '</p>' + '<br>' + '<p>' + 'Released in: ' +
-  movie.year + ' .' + '</p>' + '<br>' + '<p>' + 'Directed by: ' + movie.director + ' .' + '</p>' +
-  '<br>' + '<p>' + 'Main Actors: ' + movie.actors + ' .' + '</p>' + '<br>' + '<p>' + 'Category: ' +
-  movie.category + '</p>' + '<br>' + '<p>' + 'Status: ' + movie.status + ' .' + '<br>' + '<p>' +
-  'Comments: ' + movie.comment + '</p>' + '<br>' + '<p>' + 'Trailer url: ' + movie.trailer +
-  '</p>' + '</li>')
+  $('#movie').html(showMovieHtml)
 
   $('.my-input').val('')
   // console.log(data)
@@ -42,6 +40,26 @@ console.log('Discovering what is it called data: ' + data)
   // console.log(store)
   $('#message_1').show().text('Sucessfully get movie.').fadeOut(5000)
 }
+
+// const getOneMovieSuccess = function (data) {
+// console.log('Discovering what is it called data: ' + data)
+//   store.movie = data.movie
+//   $('#movie').show()
+//
+//   $('#movie').html('<li><h4>' + movie.title + '</h4>' + '<br>' + '<p>' + movie.poster +
+//   '</p>' + '<br>' + '<p>' + 'Sinopse: ' + movie.sinopse + ' .' + '</p>' + '<br>' + '<p>' + 'Released in: ' +
+//   movie.year + ' .' + '</p>' + '<br>' + '<p>' + 'Directed by: ' + movie.director + ' .' + '</p>' +
+//   '<br>' + '<p>' + 'Main Actors: ' + movie.actors + ' .' + '</p>' + '<br>' + '<p>' + 'Category: ' +
+//   movie.category + '</p>' + '<br>' + '<p>' + 'Status: ' + movie.status + ' .' + '<br>' + '<p>' +
+//   'Comments: ' + movie.comment + '</p>' + '<br>' + '<p>' + 'Trailer url: ' + movie.trailer +
+//   '</p>' + '</li>')
+//
+//   $('.my-input').val('')
+//   // console.log(data)
+//   // store.movie = data.movie
+//   // console.log(store)
+//   $('#message_1').show().text('Sucessfully get movie.').fadeOut(5000)
+// }
 
 const getOneMovieFailure = function (error) {
   console.error(error)
