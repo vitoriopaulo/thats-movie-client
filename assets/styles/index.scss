@@ -200,12 +200,12 @@ form {
   font-size: 16px;
   border: none;
   text-align: center;
-  color: rgb(199, 255, 13);
+  color: rgb(185, 185, 185);
 }
 
 input {
    text-align: center;
-   color: rgb(199, 255, 13);
+   color: rgb(185, 185, 185);
    background-color: black;
 }
 
@@ -230,7 +230,7 @@ h4 {
 p {
   color: rgb(185, 185, 185);
   font-family: 'Raleway', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   text-align: justify;
 }
 
@@ -254,7 +254,7 @@ html, body {
   width: 510px;
   height: 700px;
   font-size: 'Raleway', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   border: none;
   text-align: center;
   margin-left: 360px;
@@ -266,7 +266,7 @@ html, body {
   width: 510px;
   height: 700px;
   font-size: 'Raleway', sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   border: none;
   text-align: center;
   margin-left: 360px;
@@ -280,10 +280,10 @@ background-color: black;
 font-family: 'Raleway', sans-serif;
 font-size: 16px;
 border: none;
-text-align: center;
+text-align: justify;
 line-height: 1.5;
 resize: vertical;
-color: rgb(199, 255, 13);
+color: rgb(185, 185, 185);
 }
 
 #movies-list {
