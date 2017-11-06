@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>That's Movie!</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+
+    </head>
+
+    <body class="container-fluid">
+
+<!-- header -->
+<div class="header">
+    <header>
+          <div class="row">
+            <div class="col-md-9">
+              <h1 class="title">That's Movie!</h1>
+            </div>
+              <!-- User auth forms modal -->
+            <div class="col-md-3">
+            <!-- Trigger/Open The Modal -->
+              <button type="button" data-toggle="modal" data-target="#auth-modal" class='modal-button btn btn-success'>Account</button>
+            </div>
+          </div>
+      </header>
+</div>
+
+<!-- Home Page Background -->
+   <div class="back-ground-hp"> <img class="img-fluid secondary-hide" src="https://78.media.tumblr.com/9fe09ece43ff3b7c1941ef1e6a94c9e4/tumblr_oyuo64L4341wvd0d5o1_1280.jpg">
+   </div>
+
+  <!-- Auth Modal -->
+          <div class="modal fade" id="auth-modal" tabindex="-1" aria-hidden="true">
+          <!-- auth content -->
+            <div class="modal-content">
+              <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+              <p id='message'></p>
+              <section id='auth'>
+
+                <form id="sign-up" class='secondary-hide'>
+                  <fieldset>
+                    <h3 class="text-green">Sign Up!</h3>
+                    <input class="underline" type="email" name="credentials[email]" placeholder="Input email" autocomplete="off" required>
+                    <input class="underline" type="password" name="credentials[password]" placeholder="Input password" autocomplete="off" required>
+                    <input class="underline" type="password" name="credentials[password_confirmation]" placeholder="Confirm Password" autocomplete="off" required>
+                   <button class="btn btn-success button6" type="submit" name="submit" >Sign Up! </button>
+                  </fieldset>
+                </form>
+
+
+                <form id="sign-in" class='secondary-hide'>
+                  <h3 class='secondary-hide text-green'>Sign In!</h3>
+                  <input class="underline" type="email" name="credentials[email]" placeholder="Input email" autocomplete="off" required>
+                  <input class="underline" type="password" name="credentials[password]" placeholder="Input password" autocomplete="off" required>
+                  <button type="submit" class="btn btn-success button6">Sign In!</button>
+                </form>
+
+
+                <form id="change-password" class='initial-hide'>
+                  <h3 class='initial-hide text-green'>Change Password</h3>
+                  <input class="underline" type="password" name="passwords[old]" placeholder="Input old password" autocomplete="off" required>
+                  <input class="underline" type="password" name="passwords[new]" placeholder="Input new password" autocomplete="off" required>
+                  <button type="submit" class="btn btn-success button6">Submit</button>
+                </form>
+
+                <form id="sign-out" class='initial-hide'>
+                  <button type="submit" class="btn btn-danger button6">
+                    See you later!
+                  </button>
+                </form>
+              </section>
+            </div>
+          </div>
+<!-- Auth Modal -->
+
+<!-- Forms and Buttons to perform CRUD -->
+<br>
+<br>
+
+<p id="message_0" class="message"> </p>
+<br>
+<br>
+            <form class="initial-hide" id="get-all-movies">
+              <fieldset>
+                <button type="submit" name="submit" value="Get all Movies." class="btn btn-default button5">
+                  Get all Movies</button>
+              </fieldset>
+            </form>
+          <br>
+<br>
+    <div id="getallmovies" class="initial-hide">
+          <ul class="initial-hide" id="movies">
+          </ul>
+    </div>
+
+      <br>
+      <br>
+      <p id="message_1" class="message"> </p>
+      <br>
+      <br>
+
+          <form class="initial-hide" id="get-movie-by-id">
+              <fieldset>
+                <legend>Get one Movie</legend>
+                <input type="text" name="movie" placeholder="Type movie id here." class="my-input" autocomplete="off" required>
+                <br>
+                <br>
+                <button type="submit" class="btn btn-default button5">
+                  Get one Movie</button>
+              </fieldset>
+            </form>
+      <br>
+      <br>
+
+      <div id="getonemovie" class="initial-hide">
+            <ul class="initial-hide" id="movie">
+            </ul>
+      </div>
+
+      <br>
+      <br>
+      <p id="message_2" class="message"> </p>
+      <br>
+      <br>
+
+      <form class="initial-hide" id="add-movie">
+              <fieldset>
+                <legend>Add Movie</legend>
+                <input type="text" name="movie[title]" placeholder="Type movie title here." class="my-input" autocomplete="off" required>
+                <br>
+                <br>
+                <textarea type="text" name="movie[sinopse]" placeholder="Type movie sinopse here." class="my-txtarea" autocomplete="off" required></textarea>
+                <br>
+                <br>
+                <input type="number" name="movie[year]" placeholder="Type movie year here." class="my-input" autocomplete="off" required>
+                <br>
+                <br>
+                <input type="text" name="movie[director]" placeholder="Type movie director here." class="my-input" autocomplete="off" required>
+                <br>
+                <br>
+                <textarea type="text" name="movie[actors]" placeholder="Type movie actors here." class="my-txtarea" autocomplete="off" required></textarea>
+                <br>
+                <br>
+                <input type="text" name="movie[poster]" placeholder="Type movie poster url here." class="my-input" autocomplete="off" required>
+                <br>
+                <br>
+                <input type="text" name="movie[trailer]" placeholder="Type movie trailer url here." class="my-input" autocomplete="off" required>
+                <br>
+                <br>
+                <input type="text" name="movie[category]" placeholder="Type movie category here." class="my-input" autocomplete="off" required>
+                <br>
+                <br>
+                <textarea type="text" name="movie[comment]" placeholder="Type movie comment here." class="my-txtarea" autocomplete="off" required></textarea>
+                <br>
+                <br>
+                <input type="text" name="movie[status]" placeholder="Type movie status here." class="my-input" autocomplete="off" required>
+                <br>
+                <br>
+                <button type="submit" class="btn btn-default button5">
+                  Add Movie</button>
+              </fieldset>
+            </form>
+
+            <br>
+            <br>
+            <p id="message_3" class="message"> </p>
+            <br>
+            <br>
+
+      <form class="initial-hide" id="update-movie">
+              <fieldset>
+                <legend>Update Movie</legend>
+                <input type="number" name="movie[id]" placeholder="Type movie id here." class="my-input" autocomplete="off" required>
+                <br>
+                <br>
+                <input type="text" name="movie[title]" placeholder="Type movie title here." class="my-input" autocomplete="off" required>
+                <br>
+                <br>
+                <textarea type="text" name="movie[sinopse]" placeholder="Type movie sinopse here." class="my-txtarea" autocomplete="off" required></textarea>
+                <br>
+                <br>
+                <input type="number" name="movie[year]" placeholder="Type movie year here." class="my-input" autocomplete="off" required>
+                <br>
+                <br>
+                <input type="text" name="movie[director]" placeholder="Type movie director here." class="my-input" autocomplete="off" required>
+                <br>
+                <br>
+                <textarea type="text" name="movie[actors]" placeholder="Type movie actors here." class="my-txtarea" autocomplete="off" required></textarea>
+                <br>
+                <br>
+                <input type="text" name="movie[poster]" placeholder="Type movie poster url here." class="my-input" autocomplete="off" required>
+                <br>
+                <br>
+                <input type="text" name="movie[trailer]" placeholder="Type movie trailer url here." class="my-input" autocomplete="off" required>
+                <br>
+                <br>
+                <input type="text" name="movie[category]" placeholder="Type movie category here." class="my-input" autocomplete="off" required>
+                <br>
+                <br>
+                <textarea type="text" name="movie[comment]" placeholder="Type movie comment here." class="my-txtarea" autocomplete="off" required></textarea>
+                <br>
+                <br>
+                <input type="text" name="movie[status]" placeholder="Type movie status here." class="my-input" autocomplete="off" required>
+                <br>
+                <br>
+                <button type="submit" class="btn btn-default button5">
+                  Update Movie</button>
+              </fieldset>
+            </form>
+
+            <br>
+            <br>
+            <p id="message_4" class="message"> </p>
+            <br>
+            <br>
+
+      <form class="initial-hide" id="delete-movie">
+              <fieldset>
+                <legend>Delete Movie</legend>
+                <input type="number" name="movie[id]" placeholder="Type movie id here." class="my-input" autocomplete="off" required>
+            <br>
+            <br>
+                <button type="submit" class="btn btn-default button5">
+                  Delete Movie</button>
+              </fieldset>
+            </form>
+
+            <br>
+            <br>
+            <p id="message_5" class="message"> </p>
+            <br>
+            <br>
+<!-- Forms and Buttons to perform CRUD -->
+
+<div class="footer">
+  <footer class="footer"> <p class="copyright"> Copyright 2017 :: Created with much &hearts;
+    by Vitorio Paulo for GA</p> </footer>
+<div>
+    </body>
+</html>
