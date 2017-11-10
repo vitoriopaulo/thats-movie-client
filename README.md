@@ -63,7 +63,7 @@ and render them in the client, and it worked.
 The server-side of the web application is also hosted in Github:
 https://github.com/vitoriopaulo/thats-movie-server
 
-## **Depoyed Urls of the Full-stack Web App:**
+## **Deployed Urls of the Full-stack Web App:**
 Bellow follows the deployed urls of both front-end and back-end of the
 full-stack web application:
 https://vitoriopaulo.github.io/thats-movie-client/
