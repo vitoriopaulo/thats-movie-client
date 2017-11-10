@@ -1,3 +1,5 @@
+![Capstone Project](https://78.media.tumblr.com/d1ef6fab3df0dcf5b83ed5b51a1d68b7/tumblr_oz3ntwtJez1wvd0d5o1_1280.png)
+
 This is the Capstone full-stack (front-end and back-end) project developed in
 the scope of the program of the WDI (Web Development Immersive) 020 Fall
 class Boston.
