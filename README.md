@@ -56,9 +56,6 @@ Thinking creatively, I was able to problem solve the matter: I realize that urls
 by ruby. As such, I settled to ruby the entity poster the value string, so we could use urls of the images as endpoints 
 and render them in the client, and it worked.
 
-## **Routes (paths and methods) of the api:**
-
-
 ## **Github Repository of the server-side of the Web App:**
 The server-side of the web application is also hosted in Github:
 https://github.com/vitoriopaulo/thats-movie-server
